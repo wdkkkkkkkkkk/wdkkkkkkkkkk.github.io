@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dongkuan Wu — CV</title>
+  <meta name="description" content="Clear, minimal personal page for Dongkuan Wu." />
+  <style>
+    :root { --bg:#ffffff; --text:#111; --muted:#444; --link:#0a66c2; --border:#e5e7eb; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:var(--bg)}
+    .container{max-width:860px; margin:0 auto; padding:28px 18px}
+    h1{font-size:28px; margin:0 0 6px 0}
+    h2{font-size:20px; margin:26px 0 10px; padding-top:6px; border-top:1px solid var(--border)}
+    h3{font-size:16px; margin:0}
+    .muted{color:var(--muted)}
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .grid-2{display:grid; grid-template-columns:1fr auto; gap:8px; align-items:center}
+    .list{display:grid; gap:8px}
+    .item{padding:10px 0}
+    .time{white-space:nowrap; color:var(--muted); font-size:14px}
+    .meta{color:var(--muted)}
+    ul{margin:8px 0 0 18px}
+    .topline{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:10px 0 16px}
+    @media (max-width:720px){ .grid-2{grid-template-columns:1fr} .time{margin-top:2px} }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Dongkuan Wu</h1>
+      <div class="topline">
+        <span>Email: <a href="mailto:dongkuanwu@gmail.com">dongkuanwu@gmail.com</a> · <a href="mailto:12211229@mail.sustech.edu.cn">12211229@mail.sustech.edu.cn</a></span>
+        <span>Tel: (+86) 15147183485</span>
+        <span>Supervisor: Hao Yu (SUSTech)</span>
+      </div>
+      <div class="muted">Focus: LLM compression (quantization, pruning), FPGA-based acceleration and edge deployment</div>
+    </header>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="list">
+        <div class="grid-2 item">
+          <div>
+            <h3>Infix — Intern</h3>
+            <div class="meta">LLM optimization & deployment</div>
+          </div>
+          <div class="time">Sep. 2025 — Present</div>
+        </div>
+        <div class="grid-2 item">
+          <div>
+            <h3>Toolchain for Model Compression & VCU128 FPGA Deployment</h3>
+            <div class="meta">SUSTech, Yuhao Lab</div>
+            <ul>
+              <li>Built a reusable HW–SW co-design flow from offline GPTQ (per‑group) & parameter packing to Verilog kernel integration; ran DeepSeek‑Distill‑Qwen 2.5‑7B, Qwen 2‑7B, ChatGLM 2/3‑6B (GPTQ) on VCU128.</li>
+              <li>Rearranged/packed quantized tensors into AXI‑Stream blocks to reduce runtime transposition; coordinated with Edge‑LLM framework for better on‑chip utilization and throughput.</li>
+            </ul>
+          </div>
+          <div class="time">2024 — 2025</div>
+        </div>
+        <div class="grid-2 item">
+          <div>
+            <h3>One‑Shot Sparsity Mask Rebuilder (LLM‑Barber)</h3>
+            <div class="meta">SUSTech, advised by Yupeng Su</div>
+            <ul>
+              <li>Proposed a block‑aware reconstruction that integrates sparsity across Self‑Attention and MLP for globally optimized pruning; extensive experiments across models/settings.</li>
+            </ul>
+          </div>
+          <div class="time">2024 — 2025</div>
+        </div>
+        <div class="grid-2 item">
+          <div>
+            <h3>Rotation‑driven Mixed‑Precision Quantization</h3>
+            <div class="meta">UCSD, Mingu Kang Lab</div>
+            <ul>
+              <li>Partitioned each layer’s weights/activations and applied orthogonal rotations to flatten outliers; enabled fine‑grained mixed‑precision with preserved end‑to‑end accuracy.</li>
+            </ul>
+          </div>
+          <div class="time">Mar. 2025 — Jun. 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <div class="list">
+        <div class="item">
+          <div class="grid-2">
+            <div>
+              <strong>LLM‑Barber: Block‑Aware Rebuilder for Sparsity Mask in One‑Shot for Large Language Models</strong><br>
+              Yupeng Su, Ziyi Guan, Xiaoqun Liu, Tianlai Jin, <strong>Dongkuan Wu</strong> · <a href="https://arxiv.org/pdf/2408.10631" target="_blank" rel="noopener">arXiv:2408.10631</a><br>
+              <span class="meta">Accepted to ICCAD 2025</span>
+            </div>
+            <div class="time">2024 — 2025</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="grid-2">
+            <div>
+              <strong>APTQ+: Attention‑FFN‑aware Post‑Training Quantization for a Layer‑wise LLM Accelerator on FPGA</strong><br>
+              Ziyi Guan†, Zhengfei Chen†, <strong>Dongkuan Wu</strong>, Ao Shen, Yifan Guo, Yupeng Su<br>
+              <span class="meta">Under submission to IEEE TCAD 2026</span>
+            </div>
+            <div class="time">2025</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="list">
+        <div class="grid-2 item">
+          <div>
+            <h3>Southern University of Science and Technology (SUSTech)</h3>
+            <div class="meta">School of Microelectronics & Engineering · GPA: 3.73/4.0 · Supervisor: Prof. Hao Yu</div>
+          </div>
+          <div class="time">Sept. 2022 — Jun. 2026</div>
+        </div>
+        <div class="grid-2 item">
+          <div>
+            <h3>University of California, San Diego (UCSD)</h3>
+            <div class="meta">Three‑month program (Reinforcement Learning, Machine Learning Algorithms, Digital IC) · GPA: 3.81/4.0 · with Prof. Mingu Kang</div>
+          </div>
+          <div class="time">Mar. 2025 — Jun. 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="list">
+        <div class="item">
+          <strong>Programming:</strong> Python, C/C++, Verilog, MATLAB
+        </div>
+        <div class="item">
+          <strong>Lab/Domain:</strong> LLM compression (quantization, pruning), model deployment on edge devices; Cadence simulation & verification
+        </div>
+        <div class="item">
+          <strong>Hardware/EDA:</strong> Xilinx VCU128; AXI‑Stream data packing; FPGA inference toolchain
+        </div>
+      </div>
+    </section>
+
+    <footer class="muted" style="margin-top:24px">
+      Last updated: <span id="updated"></span>
+    </footer>
+  </main>
+  <script>document.getElementById('updated').textContent=new Date().toISOString().slice(0,10);</script>
+</body>
+</html>
